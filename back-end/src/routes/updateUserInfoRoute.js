@@ -9,17 +9,20 @@ export const updateUserInfoRoute = {
     const { authorization } = req.headers;
     const { userId } = req.params;
 
-    const updates = ({ favoriteFood, hairColor, bio }) =>
+    const updates = (({ favoriteFood, hairColor, bio }) =>
       ({
         favoriteFood,
         hairColor,
         bio,
-      }(req.body));
+      }))(req.body);
 
     if (!authorization) {
       return res.status(401).json({ message: "No authorization header sent" });
     }
 
+    // When get authorization header, it returns as
+    // "Bearer lsaivjiej.jviejaliej.jviejalivieivj"
+    // We want the token after the space
     const token = authorization.split(" ")[1];
 
     jwt.verify(token, process.env.JWT_SECRET, async (err, decoded) => {
