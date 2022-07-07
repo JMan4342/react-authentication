@@ -6,10 +6,10 @@ export const verifyEmailRoute = {
   path: "/api/verify-email",
   method: "put",
   handler: async (req, res) => {
-    const { verficiationString } = req.body;
+    const { verificationString } = req.body;
     const db = getDbConnection("react-auth-db");
     const result = await db.collection("users").findOne({
-      verficiationString,
+      verificationString,
     });
 
     if (!result)
