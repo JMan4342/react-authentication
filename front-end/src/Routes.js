@@ -25,7 +25,7 @@ export const Routes = () => {
           <LogInPage />
         </Route>
         <Route path="/reset-password/:passwordResetCode">
-          <PasswordResetLandingPage />
+          <PasswordResetLandingPage /> 
         </Route>
         <Route path="/please-verify">
           <PleaseVerifyEmailPage />
