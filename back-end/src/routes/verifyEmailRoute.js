@@ -1,6 +1,7 @@
-import { ObjectID } from "mongodb";
+import pkg from 'mongodb';
+const { ObjectID } = pkg;
 import jwt from "jsonwebtoken";
-import { getDbConnection } from "../db";
+import { getDbConnection } from "../db.js";
 
 export const verifyEmailRoute = {
   path: "/api/verify-email",

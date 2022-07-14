@@ -1,6 +1,6 @@
 import { v4 as uuid } from "uuid";
-import { sendEmail } from "../util/sendEmail";
-import { getDbConnection } from "../db";
+import { sendEmail } from "../util/sendEmail.js";
+import { getDbConnection } from "../db.js";
 
 export const forgotPasswordRoute = {
   path: "/api/forgot-password/:email",

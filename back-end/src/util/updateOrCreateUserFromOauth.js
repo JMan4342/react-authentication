@@ -1,4 +1,4 @@
-import { getDbConnection } from "../db";
+import { getDbConnection } from "../db.js";
 
 export const updateOrCreateUserFromOauth = async ({ oauthUserInfo }) => {
   const { id: googleId, verified_email: isVerified, email } = oauthUserInfo;

@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import { getDbConnection } from "../db";
+import { getDbConnection } from "../db.js";
 
 export const resetPasswordRoute = {
   path: "/api/users/:passwordResetCode/reset-password",

@@ -1,4 +1,4 @@
-import { oauthClient } from "./oauthClient";
+import { oauthClient } from "./oauthClient.js";
 
 export const getGoogleOauthUrl = () => {
   const scopes = [
