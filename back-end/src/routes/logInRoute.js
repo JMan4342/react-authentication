@@ -34,7 +34,7 @@ export const logInRoute = {
         { expiresIn: "2d" },
         (err, token) => {
           if (err) {
-            res.status(500).json(err);
+            res.sendStatus(500);
           }
 
           res.status(200).json({ token });
